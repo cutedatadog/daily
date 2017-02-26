@@ -1,0 +1,11 @@
+f=open('somefile.txt','r')
+
+counts = dict()
+for line in f:
+    words = line.split() #分行
+    for word in words:
+        counts[word]=counts.get(word,0) + 1
+        
+print counts
+
+# 可以对文件操作，也可以和urllib一起用
